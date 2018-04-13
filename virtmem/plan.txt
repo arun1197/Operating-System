@@ -1,0 +1,11 @@
+# Arun B.
+# Describe your plan of execution in this file.
+
+Two functions -> rand_helper and rm_page.
+First few lines of rand_helper, I check the index of the frame and also get data
+from page table. Then in the if condition I set bits to PROT_READ for the case
+of no data in frame. After that I check for free frames. For the case of no data
+in frames, insert random number and remove that page. For the other case just make
+dirty bit and update the frame.
+There's not much in rm_page, check and write to disk in the case of dirty bit and
+also set entry to 0 and update the pointer.
